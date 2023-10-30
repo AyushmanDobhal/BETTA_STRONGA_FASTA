@@ -61,9 +61,7 @@ ascii_art = """
 |  \   __\/  ___/ _/ __ \_  __ \  |/ ___\       | __ \|  \   __\/ ___\|  |  \  
 |  ||  |  \___ \  \  ___/|  | \/  \  \___       | \_\ \  ||  | \  \___|   Y  \ 
 |__||__| /____  >  \___  >__|  |__|\___  > /\   |___  /__||__|  \___  >___|  / 
-              \/       \/              \/  )/       \/              \/     \/  
-
-
+              \/       \/              \/  )/       \/              \/     \/                                                 
 """
 def regex_seq(sequences, pattern):
     print("\t".join(["Name", "Start site","Stop site"]))
@@ -81,7 +79,8 @@ def len_bars(fasta_input):
     #def plot1(keys,values)
         x = header
         y= len(fasta_input[header])
-        plt.barh(x,y)
+        c= "orange"
+        plt.bar(x,y, color =c, height=0.5)
     plt.xlabel("ID")
     plt.ylabel("Nucleotides")
     plt.title("Sequence lengths")
@@ -112,7 +111,7 @@ def main():
     elif argument_input.action=="regex":
         regex_seq(fasta_input,argument_input.pattern)
     #IMPLEMENT ADDED ACTIONS HERE ACTIONS HERE WITH ELIF
-    len_bars(fasta_input)
+   # len_bars(fasta_input)
     
    
 if __name__ == "__main__":

@@ -43,7 +43,7 @@ prob_mat = logomaker.transform_matrix(counts_matrix, from_type='counts' , to_typ
 #logo = logomaker.Logo(prob_mat)
 
 #using fade probabilityas keyword argument
-logo = logomaker.Logo(prob_mat, fade_probabilities=True, stack_order='small_on_top', font_name='Arial Rounded MT Bold')
+logo = logomaker.Logo(prob_mat, fade_probabilities=True,alpha=0.9, stack_order='small_on_top', font_name='Arial Rounded MT Bold')
 plt.savefig("weblogo.png")
 #plt.show()
 
